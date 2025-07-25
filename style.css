@@ -1,43 +1,147 @@
-
-body {
-  font-family: Arial, sans-serif;
+/* ---------- General Reset ---------- */
+* {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
+
+body {
+  line-height: 1.6;
+  background: #f5f7fa;
+  color: #333;
+}
+
+/* ---------- Hero Section ---------- */
 .hero {
-  background: #1e1e2f;
-  color: #fff;
+  background: url('https://images.pexels.com/photos/1097930/pexels-photo-1097930.jpeg') no-repeat center center/cover;
+  padding: 140px 20px;
   text-align: center;
-  padding: 60px 20px;
+  color: #fff;
+  position: relative;
 }
-.hero span {
-  color: #00d8ff;
+
+.hero::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  z-index: 0;
 }
+
+.hero h1 {
+  font-size: 48px;
+  margin-bottom: 20px;
+  position: relative;
+  z-index: 1;
+}
+
+.hero h1 span {
+  color: #ffdb58;
+}
+
+.hero p {
+  font-size: 20px;
+  margin-bottom: 30px;
+  position: relative;
+  z-index: 1;
+}
+
 .cta {
-  display: inline-block;
-  margin-top: 20px;
-  padding: 10px 20px;
-  background: #00d8ff;
-  color: #fff;
+  padding: 14px 32px;
+  font-size: 18px;
+  background-color: #ffdb58;
+  color: #000;
   text-decoration: none;
-  border-radius: 4px;
+  border-radius: 30px;
+  font-weight: bold;
+  transition: all 0.3s ease-in-out;
+  position: relative;
+  z-index: 1;
 }
-.services, .projects, .about, .contact {
-  padding: 40px 20px;
+
+.cta:hover {
+  background-color: #ffd700;
+  transform: scale(1.05);
+}
+
+/* ---------- Sections ---------- */
+section {
+  padding: 60px 20px;
+  max-width: 1200px;
+  margin: auto;
   text-align: center;
 }
-.card {
-  border: 1px solid #ccc;
-  border-radius: 6px;
-  padding: 20px;
-  margin: 10px;
-  display: inline-block;
-  width: 250px;
-  vertical-align: top;
+
+h2 {
+  font-size: 36px;
+  color: #333;
+  margin-bottom: 40px;
 }
+
+/* ---------- Cards Layout ---------- */
+.service-list,
+.project-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 25px;
+}
+
+.card {
+  background: #fff;
+  padding: 30px 20px;
+  width: 280px;
+  border-radius: 16px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+}
+
+.card h3,
+.card h4 {
+  font-size: 22px;
+  margin-bottom: 10px;
+  color: #2d2d2d;
+}
+
+.card p {
+  font-size: 16px;
+  color: #555;
+}
+
+/* ---------- About & Contact ---------- */
+.about p,
+.contact p {
+  max-width: 700px;
+  margin: auto;
+  font-size: 18px;
+  color: #444;
+}
+
+.contact a {
+  color: #0066cc;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.contact a:hover {
+  text-decoration: underline;
+}
+
+/* ---------- Footer ---------- */
 footer {
-  background: #1e1e2f;
+  background-color: #222;
   color: #fff;
   text-align: center;
-  padding: 20px;
+  padding: 20px 10px;
+  font-size: 14px;
+  margin-top: 40px;
 }
